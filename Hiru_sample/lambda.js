@@ -14,6 +14,16 @@ exports.handler = function (event, context, callback) {
 		}
 	});
 
+	ddb.put({
+		TableName: 'sample',
+		Item: { 'Name': 'Hiru' }
+	}, function (err, data) {
+		if (err) {
+			//handle error
+		} else {
+			//your logic goes here
+		}
+	});
 
 
 	callback(null, data);
