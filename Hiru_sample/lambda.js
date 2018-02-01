@@ -8,6 +8,7 @@ exports.handler = function (event, context, callback) {
 	}, function (err, data) {
 		if (err) {
 			console.log(err);
+
 		} else {
 			console.log(data);
 		}
@@ -15,5 +16,5 @@ exports.handler = function (event, context, callback) {
 
 
 
-	callback(null, 'Successfully executed');
+	callback(null, data);
 }
