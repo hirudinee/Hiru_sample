@@ -3,8 +3,10 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 exports.handler = function (event, context, callback) {
 
 	ddb.put({
-		TableName: 'Hiru_Test',
-		Item: { 'sample': '001' }
+		TableName: 'contact_us',
+		Item: {
+			'sample': '001'
+		}
 	}, function (err, data) {
 		if (err) {
 			console.log(err);
